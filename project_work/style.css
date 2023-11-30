@@ -1,0 +1,493 @@
+*
+{
+   margin: 0;
+   padding:0;
+   box-sizing: border-box;
+}
+header{
+   width:100%;
+   background-color:#081c15;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+   position:sticky;
+   overflow: hidden;
+   top:0;
+   z-index: 50;
+  }
+  .logo{
+   display: flex;
+   align-items: center;
+  }
+  .logo p{
+   font-size: 40px;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   color:white;
+}
+.img{
+   width: 80px;
+   height: 80px;   
+}
+.log{
+  color:rgba(20, 189, 62, 0.904);
+  font-size: 30px;
+  font-family:cursive;
+  font-weight:bold;
+}
+.ss{
+   color:#d00000;
+   font-family:cursive;
+   text-shadow: 2px 2px 5px white;
+}
+a{
+   text-decoration: none;
+}
+.list a{
+   font-size: 20px;
+   padding: 10px;
+   color: white;
+       }
+.list a:hover
+{  
+   color:rgba(20, 189, 62, 0.904);  
+}
+#btn{
+  width: 200px;
+  height: 30px;
+  border-radius: 50px;
+  border:2px solid #aad576;
+  color: black;
+}
+#cart-icon{
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding-top: 10px;
+  color: #fff;
+}
+.cart-count{
+  position: absolute;
+  color: white;
+  top: 15px;
+  right: 120px;
+  padding: 3px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height:20px ;
+  border-radius: 50%;
+  z-index: 99;
+}
+.cart{
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 400px;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+  z-index: 100;
+}
+.cart-active{
+  right:0px;
+  transition: 0.5s;
+}
+.cart-title{
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  padding-bottom:20px ;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  color:darkgreen;
+
+}
+.cart-title .head{
+  font-weight: bold;
+  color:#d00000;
+  font-family:cursive;
+  text-shadow: 2px 2px 5px white;
+}
+.total{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.total-title{
+  font-size: 1rem;
+  font-weight: 600;
+}
+ .total-price{
+  margin-left: 0.5rem;
+}
+.btn-buy{
+  padding: 12px 20px;
+  background-color:darkgreen;
+  color:#fff;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.cart-box{
+  display: grid;
+  grid-template-columns: 32% 50% 18%;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 10px;
+}
+.cart-img{
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border:2px solid  rgba(0,0,0,0.1);
+  padding: 5px;
+}
+.detail-box{
+  display: grid;
+  row-gap: 0.5rem;  
+}
+.price-box{
+  display: flex;
+    justify-content: space-between; 
+}
+.cart-food-title{
+   font-size: 1rem;
+   text-transform: uppercase;
+   color:#ff6348;
+   font-weight: 500;
+}
+.cart-price{
+  font-weight: 500;
+}
+.cart-quantity{
+  border:1px solid rgba(0,0,0,0.1);
+  outline:none ;
+  width: 2.4rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cart-remove{
+  font-size: 24px;
+  color:red;
+  cursor: pointer;
+}
+.nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    background-color:white;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.nav a{
+    padding: 10px;
+    font-weight: bold;
+}
+.nav a button{
+    border: 1px solid #c9184a;
+    color: #c9184a;
+    background-color:#f7b267;
+    border-radius: 50px;
+    font-size: 20px;
+    width: 200px;
+    padding: 10px;
+}
+#mainmenu1,#mainmenu2,#mainmenu3,#mainmenu4,#mainmenu5{
+  max-width: 1200px;
+  padding: 4rem;
+  margin: auto;
+  width: 100%;
+}
+h2{
+    border:1px solid #aad576;
+    border-radius: 50px;        
+    background-color: #081c15;
+    color: #aad576;
+    width: 250px;
+    margin-top: 10px;
+    font-size: 35px;
+    font-style: italic;
+    padding: 10px;
+    text-align: center;
+}
+ h2:hover{
+    box-shadow:2px 2px 20px #081c15;
+}
+.first
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+        gap:1.9rem;
+        justify-content: center;
+        align-content: center;  
+        margin-top: 30px;
+    }
+   .column
+    {
+            position: relative;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 0 1px 4px rgba(40, 37, 37, 0.1);
+            border-radius: 3px;
+            text-align: center;
+            transition: transform .5s;
+    }
+    .column:hover
+    {
+        transform: scale(1.06);
+    }
+    .column img{
+        width:100%;
+        height: 250px;
+        object-fit: cover;
+    }
+    .column p{
+        font-size: 23px;
+    }
+    .column button
+    {
+        background-color:#081c15;
+        color:white;
+        padding: 5px;
+        border: none;
+        width: 200px;
+        font-size: 18px;
+    }
+     .column i{
+        color: yellow;
+        font-size: 20px;
+    }
+    .imagecnt{
+      width: 100%;
+      height: 600px;
+      background-image: url("https://www.tandoorclarksville.com/wp-content/uploads/2022/03/main-banner-bg.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+  } 
+  .textcnt{
+      padding: 20px;
+      text-align: center;
+      font-size: 25px;
+      position: absolute;
+      left: 50px;
+      bottom: 200px;
+      
+  }
+  .textcnt h1{
+      color: white;
+  }
+  .textcnt .sp{
+      font-weight: bold;
+      color:rgba(20, 189, 62, 0.904);
+      font-style: italic;
+  }
+  .textcnt button{
+      width: 200px;
+      height: 50px;
+      border-radius: 50px;
+      border:3px solid white;
+      background-color: #081c15;
+      color: white;
+      font-size: 1.4rem
+  }
+  .textcnt button:hover
+  {
+      box-shadow:2px 2px 20px #aad576;
+  }
+  .gallery{
+      padding: 10px;
+      margin-top: 50px;
+  }
+  .items
+  {      
+      display: grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,auto));
+      grid-gap: 20px;
+      padding: 10px;
+      justify-content: center;
+  }
+  .part{
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px black;
+      overflow: hidden;
+  }
+  .part img:hover{
+      transform: scale(1.1);
+  }
+  .part img{
+      border-radius: 10px;
+      object-fit: cover;
+      width:100%;
+      height:200px;
+      transition: .3s;
+  }
+  .part h4
+  {
+      font-size: 25px;
+      color:darkgreen;
+      font-style: oblique;
+  }
+  .wholecontain{
+      width: 100%;
+      margin-top: 50px;
+  }
+  .menucontain{
+    display: grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,auto));
+    grid-gap: 20px;
+    padding: 10px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  
+  .textcontent{
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 0 10px black;
+  }
+  .textcontent p{
+      font-size: 30px;
+      font-style: italic;
+      color: #d00000;
+      
+  }
+  .textcontent .detail{
+    font-size: 18px;
+    color: black;
+  }
+  .textcontent h1{
+      font-size: 25px;
+      font-family:serif;
+      color:rgba(18, 75, 32, 0.904);
+  }
+  .textcontent button{
+      width: 150px;
+      color:#aad576;
+      padding: 10px;
+      border: 1px solid #aad576;
+      background-color: #081c15;
+      font-size: 15px;
+  }
+  .textcontent button:hover{
+      box-shadow:0px 0px 30px #081c15;
+  }
+  
+  .textcontent img{
+      width: 100%;
+      height: 200px;
+  }
+  .footer{
+      width: 100%;
+      background-color:#081c15;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+  }
+  .footer div
+  {
+      font-size: 22px;
+      color:white;
+      padding: 20px;
+  }
+  .div2 i
+  {
+     color: white;
+  }
+  .abt{
+    width: 100%;
+    margin-top: 10px;
+    padding: 40px;
+}
+.abt h1{
+    text-align: center;
+}
+.abt p{
+    font-size: 23px;
+    color:#4a5759;
+}
+.intro{
+    background-color:rgb(231, 235, 18);
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    padding: 20px;
+}
+.wholeinfo{
+   background-color:#dfe3e4;
+   width: 90%;
+   position: relative;
+   top: -250px;
+   margin-left: 5%;
+   margin-right: 10%;
+}
+.info{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+.info>.image{
+    width: 50%;
+    padding: 10px;
+}
+.info>.image img{
+    width: 100%;
+    height: 300px;
+    margin-top: 50px;
+}
+.info>.text{
+    width: 50%;
+    padding: 10px;
+}
+.info>.text p{
+    font-size: 18px;
+
+}
+.contact{
+  width: 100%;
+  height: 600px;
+  background-image: url("https://bucketbiryani.com/wp-content/uploads/2020/03/header_contact.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.h1{
+  text-align: center;
+  position: absolute;
+  margin-top:20%;
+  left: 40%;
+  color: #aad576;
+  
+  font-size: 50px;
+  font-style: italic;
+}
+.h2{
+  text-align: center;
+  position: absolute;
+  margin-top:16%;
+  left: 45%;
+  color: #aad576;
+  font-size: 20px;
+  
+}
+.contact1{
+  text-align: center;
+  width: 100%;
+  background-color:#aad576;
+  color: black;
+  padding: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+span{
+  color: steelblue;
+}
